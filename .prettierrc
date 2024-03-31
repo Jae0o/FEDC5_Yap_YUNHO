@@ -9,5 +9,22 @@
   "trailingComma": "all",
   "bracketSameLine": false,
   "jsxBracketSameLine": false,
-  "arrowParens": "always"
+  "arrowParens": "always",
+
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+
+  "importOrder": [
+    ".Styles",
+    ".css$",
+
+    "^react",
+
+    "^@",
+    "^[../]",
+    "^[./]",
+    "<THIRD_PARTY_MODULES>"
+  ],
+
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
