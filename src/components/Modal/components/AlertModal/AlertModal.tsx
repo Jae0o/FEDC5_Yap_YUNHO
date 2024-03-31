@@ -1,7 +1,9 @@
-import * as S from "./AlertModal.Styles"
 import * as GS from "../../ModalGlobal.Styles"
-import CustomModal from "../CustomModal/CustomModal"
+import * as S from "./AlertModal.Styles"
+
 import { MouseEvent } from "react"
+
+import CustomModal from "../CustomModal/CustomModal"
 
 interface AlertModalProps {
   isShow: boolean

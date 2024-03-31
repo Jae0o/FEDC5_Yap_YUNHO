@@ -1,11 +1,14 @@
 import * as S from "./LoginInputItem.Styles"
+
 import { ChangeEvent, useState } from "react"
-import type { UpdateUserInfo } from "../../../types/index"
+
+import Input from "@/components/Input/Input"
 import {
   validateEmailInput,
   validatePasswordInput,
 } from "@/pages/Login/utils/validation"
-import Input from "@/components/Input/Input"
+
+import type { UpdateUserInfo } from "../../../types/index"
 
 interface LoginInputItemPropType {
   updateUserInfo: UpdateUserInfo

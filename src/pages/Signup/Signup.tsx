@@ -1,11 +1,14 @@
 import * as S from "./Signup.Styles"
+
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
+import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
+import useModal from "@/components/Modal/hooks/useModal"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+
 import SignupFirstForm from "./components/SignupFirstForm/SignupFirstForm"
 import SignupSecondForm from "./components/SignupSecondForm/SignupSecondForm"
-import { useNavigate } from "react-router-dom"
-import { useState } from "react"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import useModal from "@/components/Modal/hooks/useModal"
-import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 
 export default function Signup() {
   const { isLoggedIn } = useAuthUserStore()

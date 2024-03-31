@@ -1,9 +1,12 @@
-import { useState, FormEvent } from "react"
 import * as S from "./SignupSecondForm.Styles"
-import { theme } from "@/styles/theme"
-import useSignupSecondForm from "../../hooks/useSignupSecondForm"
-import ProfileImageUpload from "@/components/ProfileImageUpload/ProfileImageUpload"
+
+import { FormEvent, useState } from "react"
 import { useNavigate } from "react-router-dom"
+
+import ProfileImageUpload from "@/components/ProfileImageUpload/ProfileImageUpload"
+import { theme } from "@/styles/theme"
+
+import useSignupSecondForm from "../../hooks/useSignupSecondForm"
 
 interface FormDataType {
   binary: FormData

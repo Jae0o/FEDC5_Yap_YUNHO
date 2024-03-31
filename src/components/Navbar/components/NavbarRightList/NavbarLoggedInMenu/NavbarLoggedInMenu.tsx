@@ -1,5 +1,7 @@
-import { NavbarMenuProps } from "@/components/Navbar/Navbar.Types"
 import { NavbarMenuList } from "./../NavbarRightList.Styles"
+
+import { NavbarMenuProps } from "@/components/Navbar/Navbar.Types"
+
 import NavbarMenuItem from "../NavbarMenuItem/NavbarMenuItem"
 
 const NavbarLoggedInMenu = ({

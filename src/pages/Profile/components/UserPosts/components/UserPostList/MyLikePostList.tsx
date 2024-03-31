@@ -1,14 +1,17 @@
-import PostDetail from "@/components/PostDetail/PostDetail"
 import * as S from "./UserPostList.Styles"
-import UserPostListItem, {
-  UserPostListItemProps,
-} from "./components/UserPostListItem"
+
+import { useCallback, useEffect } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+
 import { API } from "@/apis/Api"
+import PostDetail from "@/components/PostDetail/PostDetail"
 import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
 import useAuthUserStore from "@/stores/useAuthUserStore"
 import { useQueries } from "@tanstack/react-query"
-import { useCallback, useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+
+import UserPostListItem, {
+  UserPostListItemProps,
+} from "./components/UserPostListItem"
 
 const MY_LIKE_POST_LIST_QUERY_KEY = "MY_LIKE_POST_LIST_QUERY_KEY"
 

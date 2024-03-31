@@ -1,18 +1,21 @@
-import { ChangeEvent, FormEvent, MouseEvent, useState } from "react"
-import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
 import * as S from "./PostCommentInput.Styles"
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward"
-import useModal from "@/components/Modal/hooks/useModal"
-import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
-import { Post, PostComment } from "@/types"
-import useAuthUserStore from "@/stores/useAuthUserStore"
+
+import { ChangeEvent, FormEvent, MouseEvent, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import commentValidation from "./util/commentValidation"
-import { POST_DETAIL_ERROR_MESSAGE } from "@/constants/errorMessage"
-import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
-import useSendComment from "@/components/PostDetail/hooks/useSendComment"
-import standardImage from "@/assets/standard.jpeg"
+
 import sendNotification from "@/apis/sendNotification"
+import standardImage from "@/assets/standard.jpeg"
+import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
+import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
+import useModal from "@/components/Modal/hooks/useModal"
+import useSendComment from "@/components/PostDetail/hooks/useSendComment"
+import { POST_DETAIL_ERROR_MESSAGE } from "@/constants/errorMessage"
+import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { Post, PostComment } from "@/types"
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward"
+
+import commentValidation from "./util/commentValidation"
 
 interface PostCommentInputProps {
   post: Post

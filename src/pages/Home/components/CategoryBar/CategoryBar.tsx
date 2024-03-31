@@ -1,8 +1,11 @@
-import React from "react"
 import * as S from "./CategoryBar.Styles"
 import * as GS from "@/components/CategoryList/CategoryList.Styles"
-import { CategoryBarProps } from "./CategoryBar.Types"
+
+import React from "react"
+
 import useCategoryList from "@/hooks/useCategoryList"
+
+import { CategoryBarProps } from "./CategoryBar.Types"
 
 const CategoryBar = ({
   selectedCategory,

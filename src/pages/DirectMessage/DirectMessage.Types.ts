@@ -1,4 +1,4 @@
-import { User, Message, Conversation } from "@/types"
+import { Conversation, Message, User } from "@/types"
 
 export interface handleMessageGroupClickProps {
   myId: string

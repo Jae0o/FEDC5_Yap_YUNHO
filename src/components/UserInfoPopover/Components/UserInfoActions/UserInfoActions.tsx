@@ -1,9 +1,11 @@
-import { User } from "@/types"
 import * as S from "./UserInfoActions.Styles"
+
 import { useNavigate } from "react-router-dom"
-import useAuthUserStore from "@/stores/useAuthUserStore"
+
 import useFetchFollow from "@/hooks/useFetchFollow"
 import useFetchUnFollow from "@/hooks/useFetchUnFollow"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { User } from "@/types"
 
 interface UserInfoActionsProps {
   author: User

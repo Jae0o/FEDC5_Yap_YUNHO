@@ -1,17 +1,20 @@
 import * as S from "./PostDetailStatus.Styles"
-import { Like, Post, User } from "@/types"
-import { getConvertedCount } from "@/util/getConvertedCount"
-import PostDetailEditActions from "./components/PostDetailEditActions"
-import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt"
-import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt"
-import LinkIcon from "@mui/icons-material/Link"
-import useModal from "@/components/Modal/hooks/useModal"
-import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
+
 import { useNavigate } from "react-router-dom"
-import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
+
+import sendNotification from "@/apis/sendNotification"
+import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
+import useModal from "@/components/Modal/hooks/useModal"
 import useLikePost from "@/components/PostDetail/hooks/useLikePost"
 import useUnLikePost from "@/components/PostDetail/hooks/useUnLikePost"
-import sendNotification from "@/apis/sendNotification"
+import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
+import { Like, Post, User } from "@/types"
+import { getConvertedCount } from "@/util/getConvertedCount"
+import LinkIcon from "@mui/icons-material/Link"
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt"
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt"
+
+import PostDetailEditActions from "./components/PostDetailEditActions"
 
 interface PostDetailStatusProps {
   post: Post

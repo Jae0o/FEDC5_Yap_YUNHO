@@ -1,4 +1,5 @@
 import * as S from "./MyMessage.Styles.ts"
+
 import { MessageProps } from "./../../../../DirectMessage.Types"
 
 const MyMessage = ({ messageData }: MessageProps) => {

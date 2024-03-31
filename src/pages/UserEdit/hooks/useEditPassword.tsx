@@ -1,8 +1,9 @@
 import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import useModal from "@/components/Modal/hooks/useModal"
-import { useMutation } from "@tanstack/react-query"
-import editPassword from "../apis/editPassword"
 import { USER_EDIT_ERROR_MESSAGE } from "@/constants/errorMessage"
+import { useMutation } from "@tanstack/react-query"
+
+import editPassword from "../apis/editPassword"
 
 const EDIT_PASSWORD_MUTATION_QUERY_KEY = "EDIT_PASSWORD_MUTATION_QUERY_KEY"
 

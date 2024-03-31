@@ -1,11 +1,14 @@
 import * as S from "./UserActions.Styles"
+
 import { useNavigate, useParams } from "react-router-dom"
+
+import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
+import useModal from "@/components/Modal/hooks/useModal"
+import { NOT_LOGIN_MODAL_MESSAGE } from "@/constants/modalMessage"
 import useAuthUserStore from "@/stores/useAuthUserStore"
+
 import UserActionButton from "./UserActionButton"
 import UserFollowActionButton from "./UserFollowActionButton"
-import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
-import { NOT_LOGIN_MODAL_MESSAGE } from "@/constants/modalMessage"
-import useModal from "@/components/Modal/hooks/useModal"
 
 const UserActions = () => {
   const navigate = useNavigate()

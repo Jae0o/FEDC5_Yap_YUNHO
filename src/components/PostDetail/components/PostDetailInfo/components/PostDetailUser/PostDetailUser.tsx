@@ -1,10 +1,12 @@
-import { Post } from "@/types"
 import * as S from "./PostDetailUser.Styles"
-import { getConvertedCount } from "@/util/getConvertedCount"
-import useAuthUserStore from "@/stores/useAuthUserStore"
+
+import standardImage from "@/assets/standard.jpeg"
 import useFetchFollow from "@/hooks/useFetchFollow"
 import useFetchUnFollow from "@/hooks/useFetchUnFollow"
-import standardImage from "@/assets/standard.jpeg"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { Post } from "@/types"
+import { getConvertedCount } from "@/util/getConvertedCount"
+
 interface PostDetailInfoUserProps {
   isMyPost: boolean
   post: Post

@@ -1,8 +1,9 @@
 import * as S from "./Popover.Styles"
+
 import { ReactNode, useEffect, useRef, useState } from "react"
-import useHover from "./hooks/useHover"
 
 import PopoverPortal from "./components/PopoverPortal"
+import useHover from "./hooks/useHover"
 
 interface PopoverProps {
   children: ReactNode

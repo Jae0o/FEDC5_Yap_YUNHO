@@ -1,7 +1,10 @@
-import React from "react"
 import * as S from "./PostCardThumbnail.Styles"
-import { PostCardThumbnailProps } from "../../PostCard.Types"
+
+import React from "react"
+
 import { NOT_FOUND_IMAGE } from "@/components/PostEdit/constants/PostEdit.Constants"
+
+import { PostCardThumbnailProps } from "../../PostCard.Types"
 
 const PostCardThumbnail = ({
   imgUrl,

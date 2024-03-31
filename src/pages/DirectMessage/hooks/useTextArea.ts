@@ -1,7 +1,8 @@
 import { useRef, useState } from "react"
-import useSendMessage from "./useSendMessage"
 import { useParams } from "react-router-dom"
+
 import { MessageInputProps } from "../components/MessageList/MessageInput/MessageInput"
+import useSendMessage from "./useSendMessage"
 
 type EventType =
   | React.KeyboardEvent<HTMLTextAreaElement>

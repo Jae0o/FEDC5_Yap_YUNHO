@@ -1,6 +1,8 @@
-import PostCard from "@/components/PostCard/PostCard"
 import * as GS from "@/components/Modal/ModalGlobal.Styles"
+
+import PostCard from "@/components/PostCard/PostCard"
 import useAuthUserStore from "@/stores/useAuthUserStore"
+
 import { EditPostState } from "../../PostEdit.Types"
 
 interface PostEditViewerProps {

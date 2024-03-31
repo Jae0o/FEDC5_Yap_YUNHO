@@ -1,9 +1,9 @@
-import { useQuery } from "@tanstack/react-query"
 import { AUTH_API } from "@/apis/Api"
-import { Notification } from "@/types/index"
-import useAuthUserStore from "@/stores/useAuthUserStore"
 import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
 import usePostEditModalStore from "@/components/PostEdit/stores/usePostEditModalStore"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { Notification } from "@/types/index"
+import { useQuery } from "@tanstack/react-query"
 
 export const QUERY_KEY_GET_NOTIFICATION = "GET_NOTIFICATION"
 

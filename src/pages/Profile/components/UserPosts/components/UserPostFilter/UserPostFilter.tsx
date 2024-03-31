@@ -1,8 +1,11 @@
-import { useState } from "react"
 import * as S from "./UserPostFilter.Styles"
-import { USER_POST_FILTER_LIST } from "@/pages/Profile/constants/UserPost.Constants"
+
+import { useState } from "react"
 import { useParams } from "react-router-dom"
+
+import { USER_POST_FILTER_LIST } from "@/pages/Profile/constants/UserPost.Constants"
 import useAuthUserStore from "@/stores/useAuthUserStore"
+
 import UserPostFilterButton from "./UserPostFilterButton"
 
 interface UserPostFilterProps {

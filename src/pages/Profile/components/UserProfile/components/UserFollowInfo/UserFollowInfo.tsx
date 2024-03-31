@@ -1,5 +1,6 @@
-import { getConvertedCount } from "@/util/getConvertedCount"
 import * as S from "./UserFollowInfo.Styles"
+
+import { getConvertedCount } from "@/util/getConvertedCount"
 import CircleIcon from "@mui/icons-material/Circle"
 
 interface UserFollowInfoProps {

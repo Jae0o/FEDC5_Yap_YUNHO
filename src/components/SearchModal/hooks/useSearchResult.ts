@@ -1,7 +1,8 @@
 import { API } from "@/apis/Api"
+import findIndexByLowerCase from "@/components/SearchModal/utils/findIndexByLowerCase"
 import { JSONPost, User } from "@/types"
 import { useQuery } from "@tanstack/react-query"
-import findIndexByLowerCase from "@/components/SearchModal/utils/findIndexByLowerCase"
+
 import { SearchQueryResult, SearchResultProp } from "../SearchModal.Types"
 
 const GET_SEARCH_RESULT_QUERY_KEY = "GET_SEARCH_RESULT"

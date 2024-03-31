@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react"
 import * as S from "./PopoverPortal.Styles"
+
+import { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 
 interface ModalPortalProps {

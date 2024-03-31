@@ -1,6 +1,8 @@
-import { ReactNode, useEffect } from "react"
-import useSlider from "../../hooks/useSlider"
 import * as S from "./MediaPlayerSlider.Styles"
+
+import { ReactNode, useEffect } from "react"
+
+import useSlider from "../../hooks/useSlider"
 import { ChangePlayer } from "../../store/useMediaPlayerStore.Types"
 
 interface MediaPlayerSliderProps {

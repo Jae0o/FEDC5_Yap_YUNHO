@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router-dom"
-import * as GS from "@/components/Navbar/Navbar.Styles"
 import * as S from "./NavbarLeftList.Styles"
-import SearchIcon from "@mui/icons-material/Search"
-import useSearchModalStore from "@/components/SearchModal/stores/useSearchModalStore"
+import * as GS from "@/components/Navbar/Navbar.Styles"
+
+import { useNavigate } from "react-router-dom"
+
 import SearchModal from "@/components/SearchModal/SearchModal"
+import useSearchModalStore from "@/components/SearchModal/stores/useSearchModalStore"
+import SearchIcon from "@mui/icons-material/Search"
 
 const NavbarLeftList = () => {
   const navigate = useNavigate()

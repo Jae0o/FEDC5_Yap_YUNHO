@@ -1,6 +1,8 @@
-import { HandleEditPost } from "@/components/PostEdit/PostEdit.Types"
 import * as S from "./PostEditInput.Styles"
+
 import { ChangeEvent } from "react"
+
+import { HandleEditPost } from "@/components/PostEdit/PostEdit.Types"
 import { POST_EDIT_PLACEHOLDER_MESSAGE } from "@/constants/placeholderMessage"
 
 interface PostEditInputProps {

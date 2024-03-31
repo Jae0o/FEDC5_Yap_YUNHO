@@ -1,13 +1,15 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { QUERY_KEY_GET_GROUP_MESSAGE_LIST } from "./useMessageGroupList"
-import { QUERY_KEY_GET_MESSAGE_LIST } from "./useMessageList"
+import { useParams } from "react-router-dom"
+
+import sendNotification from "@/apis/sendNotification"
 import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import useModal from "@/components/Modal/hooks/useModal"
-import sendMessageAPI from "../apis/sendMessageAPI"
-import { useParams } from "react-router-dom"
-import sendNotification from "@/apis/sendNotification"
-import { Message } from "@/types"
 import { DM_ERROR } from "@/constants/errorMessage"
+import { Message } from "@/types"
+import { useMutation, useQueryClient } from "@tanstack/react-query"
+
+import sendMessageAPI from "../apis/sendMessageAPI"
+import { QUERY_KEY_GET_GROUP_MESSAGE_LIST } from "./useMessageGroupList"
+import { QUERY_KEY_GET_MESSAGE_LIST } from "./useMessageList"
 
 export const QUERY_KEY_SEND_MESSAGE = "SEND_MESSAGE"
 

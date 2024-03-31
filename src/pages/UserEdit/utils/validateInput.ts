@@ -1,7 +1,8 @@
 import { USER_EDIT_ERROR_MESSAGE } from "@/constants/errorMessage"
+
 import {
-  ValidateUserInfo,
   RequiredUserInfo as ErrorMessageType,
+  ValidateUserInfo,
 } from "../types"
 
 /**

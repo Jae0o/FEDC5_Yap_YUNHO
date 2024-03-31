@@ -1,9 +1,10 @@
-import { useMutation } from "@tanstack/react-query"
-import { signup } from "../apis/signup"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import standard from "@/assets/standard.jpeg"
 import { AUTH_API } from "@/apis/Api"
+import standard from "@/assets/standard.jpeg"
 import { SIGNUP_ERROR_MESSAGE } from "@/constants/errorMessage"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { useMutation } from "@tanstack/react-query"
+
+import { signup } from "../apis/signup"
 
 const SIGNUP_FIRST_FORM_MUTATION_QUERY_KEY =
   "SIGNUP_FIRST_FORM_MUTATION_QUERY_KEY"

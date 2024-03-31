@@ -1,10 +1,13 @@
 import * as S from "./MessageGroupUserlist.Styles"
-import { handleMessageGroupClickProps } from "../../../DirectMessage.Types"
-import decideChatUserName from "@/pages/DirectMessage/utils/decideChatUserName"
-import { useNavigate } from "react-router-dom"
+
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import { AUTH_API } from "@/apis/Api"
-import { User, Conversation } from "@/types"
+import decideChatUserName from "@/pages/DirectMessage/utils/decideChatUserName"
+import { Conversation, User } from "@/types"
+
+import { handleMessageGroupClickProps } from "../../../DirectMessage.Types"
 import MessageGroupItem from "./MessageGroupItem/MessageGroupItem"
 
 interface MessageGroupUserListProps {

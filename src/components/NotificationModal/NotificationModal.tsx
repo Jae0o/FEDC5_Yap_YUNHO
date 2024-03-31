@@ -1,8 +1,10 @@
 import * as S from "./NotificationModal.Styles"
-import NotificationTitle from "./components/NotificationTitle/NotificationTitle"
-import NotificationList from "./components/NotificationList/NotificationList"
-import CustomModal from "../Modal/components/CustomModal/CustomModal"
+
 import useGetNotification from "@/components/NotificationModal/hooks/useGetNotification"
+
+import CustomModal from "../Modal/components/CustomModal/CustomModal"
+import NotificationList from "./components/NotificationList/NotificationList"
+import NotificationTitle from "./components/NotificationTitle/NotificationTitle"
 
 interface NotificationModalProps {
   isShow: boolean

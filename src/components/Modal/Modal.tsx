@@ -1,7 +1,10 @@
 import * as S from "./Modal.Styles"
-import CloseIcon from "@mui/icons-material/Close"
-import ModalPortal from "./components/ModalPortal"
+
 import { MouseEvent } from "react"
+
+import CloseIcon from "@mui/icons-material/Close"
+
+import ModalPortal from "./components/ModalPortal"
 
 interface ModalProps {
   children: React.ReactNode

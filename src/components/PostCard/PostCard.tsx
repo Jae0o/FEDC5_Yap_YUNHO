@@ -1,4 +1,5 @@
 import * as S from "./PostCard.Styles"
+
 import { PostCardProps } from "./PostCard.Types"
 import MediaPlayer from "./components/MediaPlayer/MediaPlayer"
 import { PostCardContent } from "./components/PostCardContent/PostCardContent"

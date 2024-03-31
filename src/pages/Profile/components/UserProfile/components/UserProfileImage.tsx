@@ -1,4 +1,5 @@
 import * as S from "../UserProfile.Styles"
+
 import defaultImage from "@/assets/standard.jpeg"
 
 interface UserProfileImageProp {

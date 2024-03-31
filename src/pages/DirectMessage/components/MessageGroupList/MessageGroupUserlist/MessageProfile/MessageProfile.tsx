@@ -1,6 +1,7 @@
-import standard from "@/assets/standard.jpeg"
 import * as S from "./MessageProfile.Styles"
+
 import seenindicator from "@/assets/seenindicator.png"
+import standard from "@/assets/standard.jpeg"
 
 interface MessageProfileProps {
   isOnline?: boolean

@@ -1,8 +1,10 @@
-import { OnSelectFilterProp } from "@/components/SearchModal/SearchModal.Types"
 import * as S from "./SearchInputFilter.Styles"
+
 import React, { useState } from "react"
-import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material"
+
+import { OnSelectFilterProp } from "@/components/SearchModal/SearchModal.Types"
 import useToggle from "@/hooks/useToggle"
+import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material"
 
 const SearchInputFilter = ({ onSelectFilter }: OnSelectFilterProp) => {
   const [filter, setFilter] = useState("전체")

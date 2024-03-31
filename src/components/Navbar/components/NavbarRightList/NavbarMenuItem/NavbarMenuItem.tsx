@@ -1,8 +1,9 @@
-import Button from "@/components/Button/Button"
 import * as S from "./NavbarMenuItem.Styles"
+
+import Button from "@/components/Button/Button"
 import { NavbarMenuProps } from "@/components/Navbar/Navbar.Types"
-import Brightness1Icon from "@mui/icons-material/Brightness1"
 import useGetNotification from "@/components/NotificationModal/hooks/useGetNotification"
+import Brightness1Icon from "@mui/icons-material/Brightness1"
 
 const NavbarMenuItem = ({ menu, handleMenuClick }: NavbarMenuProps) => {
   const { NotificationListData } = useGetNotification()

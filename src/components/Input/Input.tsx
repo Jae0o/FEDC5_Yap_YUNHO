@@ -1,11 +1,13 @@
+import * as S from "./Input.Styles"
+
 import {
+  ChangeEvent,
   ForwardedRef,
   RefObject,
   forwardRef,
   useState,
-  ChangeEvent,
 } from "react"
-import * as S from "./Input.Styles"
+
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 

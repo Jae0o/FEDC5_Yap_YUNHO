@@ -1,9 +1,12 @@
 import * as S from "./SearchResultItem.Styles"
-import SearchResultItemTitle from "./components/SearchResultItemTitle"
+
 import { useLocation, useNavigate } from "react-router-dom"
+
+import { SearchResultType } from "@/components/SearchModal/SearchModal.Types"
 import useSearchModalStore from "@/components/SearchModal/stores/useSearchModalStore"
 import MessageProfile from "@/pages/DirectMessage/components/MessageGroupList/MessageGroupUserlist/MessageProfile/MessageProfile"
-import { SearchResultType } from "@/components/SearchModal/SearchModal.Types"
+
+import SearchResultItemTitle from "./components/SearchResultItemTitle"
 
 const SearchResultItem = ({
   resultInfo,

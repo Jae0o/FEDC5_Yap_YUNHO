@@ -1,7 +1,8 @@
 import * as S from "./LoginInputContainer.Styles"
-import LoginInputItem from "./LoginInputItem"
 
 import type { UpdateUserInfo } from "../../../types"
+import LoginInputItem from "./LoginInputItem"
+
 interface LoginInputContainerProps {
   updateUserInfo: UpdateUserInfo
   type: string

@@ -1,7 +1,8 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { AUTH_API } from "@/apis/Api"
+import { useMutation, useQueryClient } from "@tanstack/react-query"
 
 import { QUERY_KEY_GET_NOTIFICATION } from "./useGetNotification"
+
 const QUERY_KEY_SEEN_NOTIFICATION = "SEEN_NOTIFICATION"
 
 const useSeenNotification = () => {

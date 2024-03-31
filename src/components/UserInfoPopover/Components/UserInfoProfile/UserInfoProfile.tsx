@@ -1,7 +1,10 @@
-import { User } from "@/types"
 import * as S from "./UserInfoProfile.Styles"
+
 import { useNavigate } from "react-router-dom"
+
 import standardImage from "@/assets/standard.jpeg"
+import { User } from "@/types"
+
 interface UserInfoProfileProps {
   user: User
 }

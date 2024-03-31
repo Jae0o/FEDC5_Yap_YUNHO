@@ -1,7 +1,8 @@
-import PostCard from "@/components/PostCard/PostCard"
 import * as GS from "@/components/Modal/ModalGlobal.Styles"
-import { Post } from "@/types"
+
+import PostCard from "@/components/PostCard/PostCard"
 import usePostEditModalStore from "@/components/PostEdit/stores/usePostEditModalStore"
+import { Post } from "@/types"
 
 interface PostDetailViewerProps {
   post: Post

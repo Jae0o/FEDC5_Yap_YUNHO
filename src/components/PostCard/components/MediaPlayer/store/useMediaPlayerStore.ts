@@ -1,6 +1,7 @@
-import { create } from "zustand"
-import { UseMediaPlayerStore } from "./useMediaPlayerStore.Types"
 import { MEDIA_PLAYER_INITIAL_VOLUME_PERCENTAGE } from "../constants/MediaPlayer.Constants"
+import { UseMediaPlayerStore } from "./useMediaPlayerStore.Types"
+
+import { create } from "zustand"
 
 const useMediaPlayerStore = create<UseMediaPlayerStore>()((set) => ({
   playUrl: "",

@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom"
 import * as S from "./UserPostListItem.Styles"
-import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt"
+
+import { useNavigate } from "react-router-dom"
+
 import useHover from "@/components/Popover/hooks/useHover"
 import { Comment, ThumbUpAlt } from "@mui/icons-material"
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt"
 
 export interface UserPostListItemProps {
   thumbnail: string

@@ -1,9 +1,10 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query"
+import { AUTH_API } from "@/apis/Api"
 import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import useModal from "@/components/Modal/hooks/useModal"
 import { POST_DETAIL_ERROR_MESSAGE } from "@/constants/errorMessage"
-import { AUTH_API } from "@/apis/Api"
 import useAuthUserStore from "@/stores/useAuthUserStore"
+import { useMutation, useQueryClient } from "@tanstack/react-query"
+
 import { POST_DETAIL_QUERY_KEY } from "./useGetPost"
 
 const MUTATION_KEY_LIKE_POST_KEY = "IT_IS_LIKE_MUTATION_KEY_546786723746238"

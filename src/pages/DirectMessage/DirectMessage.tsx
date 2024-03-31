@@ -1,10 +1,13 @@
 import * as S from "./DirectMessage.Styles"
-import MessageList from "./components/MessageList/MessageList"
-import MessageGroupList from "./components/MessageGroupList/MessageGroupList"
-import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
+
 import { useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+
 import PostDetail from "@/components/PostDetail/PostDetail"
+import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
+
+import MessageGroupList from "./components/MessageGroupList/MessageGroupList"
+import MessageList from "./components/MessageList/MessageList"
 
 const DirectMessage = () => {
   const { isShowPostDetail, showDetailModal, closeDetailModal } =

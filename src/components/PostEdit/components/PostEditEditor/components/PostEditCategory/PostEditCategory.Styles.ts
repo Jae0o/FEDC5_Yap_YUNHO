@@ -1,4 +1,5 @@
 import { CategoryBarList } from "@/components/CategoryList/CategoryList.Styles"
+
 import styled from "styled-components"
 
 export const PostEditCategoryLayout = styled.div`

@@ -1,7 +1,9 @@
 import * as S from "./UserEditInputContainer.Styles"
+
+import { SIGNUP_PLACEHOLDER_MESSAGE } from "@/constants/placeholderMessage"
+
 import type { OnChange, RequiredUserInfo } from "../../types"
 import UserEditInputItem from "./UserEditInputItem"
-import { SIGNUP_PLACEHOLDER_MESSAGE } from "@/constants/placeholderMessage"
 
 interface UserEditInputContainerProp {
   onChange: OnChange

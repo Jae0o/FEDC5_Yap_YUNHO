@@ -1,6 +1,8 @@
-import NavbarMenuItem from "../NavbarMenuItem/NavbarMenuItem"
 import * as GS from "../NavbarRightList.Styles"
+
 import { NavbarMenuProps } from "@/components/Navbar/Navbar.Types"
+
+import NavbarMenuItem from "../NavbarMenuItem/NavbarMenuItem"
 
 const NavbarNotLoggedInMenu = ({
   handleMenuClick,

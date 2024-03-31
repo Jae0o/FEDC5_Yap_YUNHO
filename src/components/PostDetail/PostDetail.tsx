@@ -1,9 +1,11 @@
-import * as GS from "@/components/Modal/ModalGlobal.Styles"
 import * as S from "./PostDetail.Styles"
-import Modal from "../Modal/Modal"
-import PostDetailViewer from "./components/PostDetailViewer/PostDetailViewer"
-import PostDetailInfo from "./components/PostDetailInfo/PostDetailInfo"
+import * as GS from "@/components/Modal/ModalGlobal.Styles"
+
 import { useParams } from "react-router-dom"
+
+import Modal from "../Modal/Modal"
+import PostDetailInfo from "./components/PostDetailInfo/PostDetailInfo"
+import PostDetailViewer from "./components/PostDetailViewer/PostDetailViewer"
 import useGetPost from "./hooks/useGetPost"
 import usePostDetailModalStore from "./stores/usePostDetailModalStore"
 

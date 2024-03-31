@@ -1,10 +1,13 @@
-import { ChangeEvent, useState, FormEvent } from "react"
 import * as S from "./SignupFirstForm.Styles"
-import { theme } from "@/styles/theme"
-import SignupInputContainer from "../SignupInput/SignupInputContainer"
-import { getNewErrorMessage } from "../../utils/validateInput"
+
+import { ChangeEvent, FormEvent, useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
+
+import { theme } from "@/styles/theme"
+
 import useSignupFirstForm from "../../hooks/useSignupFirstForm"
+import { getNewErrorMessage } from "../../utils/validateInput"
+import SignupInputContainer from "../SignupInput/SignupInputContainer"
 
 interface SignupFirstFormProp {
   handleChangeForm: () => void

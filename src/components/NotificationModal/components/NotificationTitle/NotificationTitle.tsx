@@ -1,4 +1,5 @@
 import * as S from "./NotificationTitle.Styles"
+
 import { Notification } from "../../../../types/index"
 import useSeenNotification from "../../hooks/useSeenNotification"
 

@@ -1,5 +1,7 @@
-import { MouseEvent } from "react"
 import * as S from "./CustomModal.Styles"
+
+import { MouseEvent } from "react"
+
 import ModalPortal from "../ModalPortal"
 
 interface CustomModalProps {

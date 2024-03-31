@@ -1,9 +1,11 @@
 import * as S from "./MessageInput.Styles"
-import MessageProfile from "../../MessageGroupList/MessageGroupUserlist/MessageProfile/MessageProfile"
-import SendIcon from "@mui/icons-material/Send"
+
 import { DM_PLACEHOLDER_MESSAGE } from "@/constants/placeholderMessage"
 import useTextArea from "@/pages/DirectMessage/hooks/useTextArea"
 import useAuthUserStore from "@/stores/useAuthUserStore"
+import SendIcon from "@mui/icons-material/Send"
+
+import MessageProfile from "../../MessageGroupList/MessageGroupUserlist/MessageProfile/MessageProfile"
 
 export interface MessageInputProps {
   scrollRef: React.RefObject<HTMLDivElement>

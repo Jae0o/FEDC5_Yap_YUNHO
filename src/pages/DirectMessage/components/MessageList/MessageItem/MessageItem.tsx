@@ -1,6 +1,6 @@
-import OthersMessage from "./OthersMessage/OthersMessage"
-import MyMessage from "./MyMessage/MyMessage"
 import { MessageProps } from "../../../DirectMessage.Types"
+import MyMessage from "./MyMessage/MyMessage"
+import OthersMessage from "./OthersMessage/OthersMessage"
 
 const MessageItem = ({ messageData, othersUserId }: MessageProps) => {
   const isMyMessage = othersUserId === messageData.receiver?._id

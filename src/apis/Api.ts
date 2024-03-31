@@ -1,5 +1,6 @@
-import axios from "axios"
 import authToken from "@/stores/authToken"
+
+import axios from "axios"
 import { InternalAxiosRequestConfig } from "axios"
 
 const { VITE_API_BASE_URL } = import.meta.env

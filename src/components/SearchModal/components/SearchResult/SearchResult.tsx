@@ -1,3 +1,6 @@
+import * as S from "./SearchResult.Styles"
+import * as SS from "./components/SearchResultList.Styles"
+
 import { SEARCH_RESULT_COUNT } from "../../SearchModal.Constants"
 import {
   SearchQueryResult,
@@ -5,9 +8,7 @@ import {
   TypeProp,
 } from "../../SearchModal.Types"
 import useSearchResult from "../../hooks/useSearchResult"
-import * as S from "./SearchResult.Styles"
 import SearchResultItem from "./components/SearchResultItem/SearchResultItem"
-import * as SS from "./components/SearchResultList.Styles"
 
 const SearchResult = ({
   keyword,

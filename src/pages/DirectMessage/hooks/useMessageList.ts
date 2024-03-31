@@ -1,10 +1,10 @@
-import { useQuery } from "@tanstack/react-query"
-import { Message } from "@/types"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import getMessageListAPI from "../apis/getMessageListAPI"
-
 import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
 import usePostEditModalStore from "@/components/PostEdit/stores/usePostEditModalStore"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { Message } from "@/types"
+import { useQuery } from "@tanstack/react-query"
+
+import getMessageListAPI from "../apis/getMessageListAPI"
 
 export const QUERY_KEY_GET_MESSAGE_LIST =
   "GET_MESSAGE_LIST_14712784127845128534127845712"

@@ -1,9 +1,10 @@
 import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import useModal from "@/components/Modal/hooks/useModal"
-import { useMutation } from "@tanstack/react-query"
-import editNickname from "../apis/editNickname"
-import useAuthUserStore from "@/stores/useAuthUserStore"
 import { USER_EDIT_ERROR_MESSAGE } from "@/constants/errorMessage"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { useMutation } from "@tanstack/react-query"
+
+import editNickname from "../apis/editNickname"
 
 const EDIT_NICKNAME_MUTATION_QUERY_KEY = "EDIT_NICKNAME_MUTATION_QUERY_KEY"
 

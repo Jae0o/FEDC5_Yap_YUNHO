@@ -1,5 +1,7 @@
 import * as S from "./SignupInputItem.Styles"
+
 import Input from "@/components/Input/Input"
+
 import type { OnChange } from "../../types"
 
 interface SignupInputItemProp {

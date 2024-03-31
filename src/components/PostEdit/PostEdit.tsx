@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react"
 import * as GS from "@/components/Modal/ModalGlobal.Styles"
+
+import { useEffect, useState } from "react"
+
+import { API } from "@/apis/Api"
+import { JSONPost, PostContent } from "@/types"
+import getThumbnailByUrl from "@/util/getThumbnailByUrl"
+
+import Modal from "../Modal/Modal"
+import { EditPostState, HandleEditPost } from "./PostEdit.Types"
+import PostEditAuthChecker from "./components/PostEditAuthChecker"
 import PostEditEditor from "./components/PostEditEditor/PostEditEditor"
 import PostEditViewer from "./components/PostEditViewer/PostEditViewer"
 import { POST_EDIT_INITIAL_EDIT_POST } from "./constants/PostEdit.Constants"
-import { EditPostState, HandleEditPost } from "./PostEdit.Types"
-import getThumbnailByUrl from "@/util/getThumbnailByUrl"
-import { API } from "@/apis/Api"
-import { JSONPost, PostContent } from "@/types"
-import PostEditAuthChecker from "./components/PostEditAuthChecker"
-import Modal from "../Modal/Modal"
 import usePostEditModalStore from "./stores/usePostEditModalStore"
 
 interface PostEditProps {

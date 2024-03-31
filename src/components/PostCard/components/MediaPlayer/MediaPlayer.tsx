@@ -1,12 +1,14 @@
-import { MouseEvent, useCallback, useEffect } from "react"
 import * as S from "./MediaPlayer.Styles"
-import useMediaPlayer from "./hooks/useMediaPlayer"
-import { MediaPlayerProps } from "./MediaPlayer.Types"
-import MediaPlayerSlider from "./components/MediaPlayerPlaySlider/MediaPlayerSlider"
+
+import { MouseEvent, useCallback, useEffect } from "react"
 import ReactPlayer from "react-player"
-import { ChangePlayer } from "./store/useMediaPlayerStore.Types"
+
+import { MediaPlayerProps } from "./MediaPlayer.Types"
 import MediaPlayerBottom from "./components/MediaPlayerBottom/MediaPlayerBottom"
+import MediaPlayerSlider from "./components/MediaPlayerPlaySlider/MediaPlayerSlider"
 import { MEDIA_PLAYER_EMPTY_URL_KEYWORD } from "./constants/MediaPlayer.Constants"
+import useMediaPlayer from "./hooks/useMediaPlayer"
+import { ChangePlayer } from "./store/useMediaPlayerStore.Types"
 
 const MediaPlayer = ({ isBlock, url }: MediaPlayerProps): React.ReactNode => {
   const {

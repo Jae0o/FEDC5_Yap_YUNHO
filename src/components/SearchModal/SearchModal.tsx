@@ -1,10 +1,12 @@
-import { useState } from "react"
 import * as S from "./SearchModal.Styles"
-import SearchInput from "./components/SearchInput/SearchInput"
+
+import { useState } from "react"
+
 import Modal from "../Modal/Modal"
-import useSearchModalStore from "./stores/useSearchModalStore"
 import { SearchFilter } from "./SearchModal.Types"
+import SearchInput from "./components/SearchInput/SearchInput"
 import SearchResult from "./components/SearchResult/SearchResult"
+import useSearchModalStore from "./stores/useSearchModalStore"
 
 const SearchModal = () => {
   const [keyword, setKeyword] = useState("")

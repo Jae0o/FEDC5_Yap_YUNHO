@@ -1,8 +1,10 @@
 import * as S from "./NavbarToggleMenu.Styles"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import NavbarNotLoggedInMenu from "../NavbarNotLoggedInMenu/NavbarNotLoggedInMenu"
-import NavbarLoggedInMenu from "../NavbarLoggedInMenu/NavbarLoggedInMenu"
+
 import { NavbarMenuProps } from "@/components/Navbar/Navbar.Types"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+
+import NavbarLoggedInMenu from "../NavbarLoggedInMenu/NavbarLoggedInMenu"
+import NavbarNotLoggedInMenu from "../NavbarNotLoggedInMenu/NavbarNotLoggedInMenu"
 
 const NavbarToggleMenu = ({
   $isToggle = false,

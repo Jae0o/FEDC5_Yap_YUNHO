@@ -1,15 +1,18 @@
 import * as S from "./UserProfile.Styles"
+
+import { useNavigate, useParams } from "react-router-dom"
+
+import { AUTH_API } from "@/apis/Api"
+import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
+import useModal from "@/components/Modal/hooks/useModal"
+import { PROFILE_PAGE_ERROR_MESSAGE } from "@/constants/errorMessage"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { useQuery } from "@tanstack/react-query"
+
 import UserActions from "./components/UserActions/UserActions"
 import UserFollowInfo from "./components/UserFollowInfo/UserFollowInfo"
 import UserNickname from "./components/UserNickname"
 import UserProfileImage from "./components/UserProfileImage"
-import { AUTH_API } from "@/apis/Api"
-import { useNavigate, useParams } from "react-router-dom"
-import { useQuery } from "@tanstack/react-query"
-import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
-import { PROFILE_PAGE_ERROR_MESSAGE } from "@/constants/errorMessage"
-import useModal from "@/components/Modal/hooks/useModal"
-import useAuthUserStore from "@/stores/useAuthUserStore"
 
 const USER_PROFILE_QUERY_KEY = "USER_PROFILE_QUERY_KEY"
 

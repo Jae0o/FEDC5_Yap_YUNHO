@@ -1,13 +1,14 @@
-import PostCard from "@/components/PostCard/PostCard"
 import * as S from "./PostCardList.Styles"
 
-import { Post } from "@/types"
-import usePostEditModalStore from "@/components/PostEdit/stores/usePostEditModalStore"
-import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
-import { OnNavigatePostDetail } from "@/components/PostCard/PostCard.Types"
-import { useNavigate, useParams } from "react-router-dom"
 import { useCallback, useEffect } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+
+import PostCard from "@/components/PostCard/PostCard"
+import { OnNavigatePostDetail } from "@/components/PostCard/PostCard.Types"
 import PostDetail from "@/components/PostDetail/PostDetail"
+import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
+import usePostEditModalStore from "@/components/PostEdit/stores/usePostEditModalStore"
+import { Post } from "@/types"
 
 interface PostCardListProps {
   postList: Post[] | null[]

@@ -1,11 +1,14 @@
 import * as S from "./UserPostList.Styles"
+
+import { useCallback, useEffect } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+
+import PostDetail from "@/components/PostDetail/PostDetail"
+import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
+
 import UserPostListItem, {
   UserPostListItemProps,
 } from "./components/UserPostListItem"
-import { useNavigate, useParams } from "react-router-dom"
-import usePostDetailModalStore from "@/components/PostDetail/stores/usePostDetailModalStore"
-import PostDetail from "@/components/PostDetail/PostDetail"
-import { useCallback, useEffect } from "react"
 
 interface UserCreatePostListProps {
   createPostInfoList: UserPostListItemProps[]

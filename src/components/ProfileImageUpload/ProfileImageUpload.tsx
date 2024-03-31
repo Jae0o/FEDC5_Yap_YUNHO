@@ -1,5 +1,7 @@
-import React, { ChangeEvent, useEffect, useRef, useState } from "react"
 import * as S from "./ProfileImageUpload.Styles"
+
+import React, { ChangeEvent, useEffect, useRef, useState } from "react"
+
 import standard from "@/assets/standard.jpeg"
 import Input from "@/components/Input/Input"
 import { theme } from "@/styles/theme"

@@ -1,9 +1,12 @@
-import { FormEvent } from "react"
 import * as S from "./LoginComponent.Styles"
-import { theme } from "@/styles/theme"
-import LoginInputContainer from "./LoginInput/LoginInputContainer"
-import useLogin from "../../hooks/useLogin"
+
+import { FormEvent } from "react"
 import { useNavigate } from "react-router-dom"
+
+import { theme } from "@/styles/theme"
+
+import useLogin from "../../hooks/useLogin"
+import LoginInputContainer from "./LoginInput/LoginInputContainer"
 
 const LoginComponent = () => {
   const { userInfoRef, updateUserInfo, AlertModalComponent, loginApi } =

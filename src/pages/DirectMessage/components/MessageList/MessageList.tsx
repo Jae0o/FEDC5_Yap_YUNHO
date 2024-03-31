@@ -1,8 +1,11 @@
-import { useParams } from "react-router-dom"
 import * as S from "./MessageList.Styles"
-import { Message } from "@/types"
-import useMessageList from "../../hooks/useMessageList"
+
 import { useEffect, useRef, useState } from "react"
+import { useParams } from "react-router-dom"
+
+import { Message } from "@/types"
+
+import useMessageList from "../../hooks/useMessageList"
 import MessageInput from "./MessageInput/MessageInput"
 import MessageItem from "./MessageItem/MessageItem"
 

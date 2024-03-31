@@ -1,9 +1,11 @@
 import * as S from "./UserInfoPopover.Styles"
-import Popover from "../Popover/Popover"
-import UserInfoProfile from "./Components/UserInfoProfile/UserInfoProfile"
-import UserInfoFollowStatus from "./Components/UserInfoFollowStatus/UserInfoFollowStatus"
-import UserInfoActions from "./Components/UserInfoActions/UserInfoActions"
+
 import { User } from "@/types"
+
+import Popover from "../Popover/Popover"
+import UserInfoActions from "./Components/UserInfoActions/UserInfoActions"
+import UserInfoFollowStatus from "./Components/UserInfoFollowStatus/UserInfoFollowStatus"
+import UserInfoProfile from "./Components/UserInfoProfile/UserInfoProfile"
 
 interface UserInfoDropDownProps {
   user: User

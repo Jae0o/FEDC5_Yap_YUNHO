@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react"
-import useAuthUserStore from "@/stores/useAuthUserStore"
 import { useNavigate } from "react-router-dom"
-import useModal from "@/components/Modal/hooks/useModal"
+
 import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
+import useModal from "@/components/Modal/hooks/useModal"
 import { POST_EDIT_ERROR_MESSAGE } from "@/constants/errorMessage"
+import useAuthUserStore from "@/stores/useAuthUserStore"
 
 interface PostEditAuthCheckerProps {
   children: React.ReactNode

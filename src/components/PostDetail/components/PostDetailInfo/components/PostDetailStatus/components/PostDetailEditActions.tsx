@@ -1,12 +1,13 @@
 import * as S from "./PostDetailEditActions.Styles"
-import { Post } from "@/types"
+
+import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import ConfirmModal from "@/components/Modal/components/ConfirmModal/ConfirmModal"
 import useModal from "@/components/Modal/hooks/useModal"
-import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
-import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
 import useDeletePost from "@/components/PostDetail/hooks/useDeletePost"
 import PostEdit from "@/components/PostEdit/PostEdit"
 import usePostEditModalStore from "@/components/PostEdit/stores/usePostEditModalStore"
+import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
+import { Post } from "@/types"
 
 interface PostDetailEditActionsProps {
   onClose: () => void

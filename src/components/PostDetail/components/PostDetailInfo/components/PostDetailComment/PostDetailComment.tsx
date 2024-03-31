@@ -1,5 +1,7 @@
-import { Post } from "@/types"
 import * as S from "./PostDetailComment.Styles"
+
+import { Post } from "@/types"
+
 import PostCommentInput from "./components/PostCommentInput/PostCommentInput"
 import PostCommentList from "./components/PostCommentList/PostCommentList"
 

@@ -1,11 +1,13 @@
 import * as S from "./SearchInputBar.Styles"
-import { Search } from "@mui/icons-material"
-import {
-  SEARCH_INPUT_BAR_PLACEHOLDER,
-  SEARCH_INPUT_BAR_CHANGE_TIMER_DELAY,
-} from "@/components/SearchModal/SearchModal.Constants"
+
 import { useState } from "react"
+
+import {
+  SEARCH_INPUT_BAR_CHANGE_TIMER_DELAY,
+  SEARCH_INPUT_BAR_PLACEHOLDER,
+} from "@/components/SearchModal/SearchModal.Constants"
 import { SearchInputBarProp } from "@/components/SearchModal/SearchModal.Types"
+import { Search } from "@mui/icons-material"
 
 const SearchInputBar = ({ handleKeyword }: SearchInputBarProp) => {
   const [isFocusOnBar, setIsFocusOnBar] = useState(false)

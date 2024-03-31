@@ -1,10 +1,12 @@
-import useModal from "@/components/Modal/hooks/useModal"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import { signupUploadPhoto } from "../apis/signupUploadPhoto"
-import { useMutation } from "@tanstack/react-query"
-import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import { useNavigate } from "react-router-dom"
+
+import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
+import useModal from "@/components/Modal/hooks/useModal"
 import { SIGNUP_ERROR_MESSAGE } from "@/constants/errorMessage"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { useMutation } from "@tanstack/react-query"
+
+import { signupUploadPhoto } from "../apis/signupUploadPhoto"
 
 const SIGNUP_SECOND_FORM_MUTATION_QUERY_KEY =
   "SIGNUP_SECOND_FORM_MUTATION_QUERY_KEY"

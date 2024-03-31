@@ -1,5 +1,7 @@
-import { ReactNode } from "react"
 import * as S from "./Button.Styles"
+
+import { ReactNode } from "react"
+
 import { theme } from "@/styles/theme"
 
 interface ButtonProps {

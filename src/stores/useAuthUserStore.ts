@@ -1,8 +1,9 @@
+import { AUTH_USER_INITIAL_USER_DATA } from "../constants/stores"
+import { User } from "../types"
+import authToken from "./authToken"
+
 import { create } from "zustand"
 import { createJSONStorage, persist } from "zustand/middleware"
-import { User } from "../types"
-import { AUTH_USER_INITIAL_USER_DATA } from "../constants/stores"
-import authToken from "./authToken"
 
 const PERSIST_STORAGE_KEY = "userLoginStore"
 

@@ -1,15 +1,18 @@
-import * as GS from "@/components/Navbar/Navbar.Styles"
 import * as S from "./NavbarRightList.Styles"
+import * as GS from "@/components/Navbar/Navbar.Styles"
+
+import { useNavigate } from "react-router-dom"
+
+import StandardUserImage from "@/assets/standard.jpeg"
+import useToggle from "@/hooks/useToggle"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import CloseIcon from "@mui/icons-material/Close"
+import MenuIcon from "@mui/icons-material/Menu"
+
+import useMenuClick from "../../hooks/useNavMenuClick"
 import NavbarLoggedInMenu from "./NavbarLoggedInMenu/NavbarLoggedInMenu"
 import NavbarNotLoggedInMenu from "./NavbarNotLoggedInMenu/NavbarNotLoggedInMenu"
-import MenuIcon from "@mui/icons-material/Menu"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import { useNavigate } from "react-router-dom"
 import NavbarToggleMenu from "./NavbarToggleMenu/NavbarToggleMenu"
-import useToggle from "@/hooks/useToggle"
-import useMenuClick from "../../hooks/useNavMenuClick"
-import CloseIcon from "@mui/icons-material/Close"
-import StandardUserImage from "@/assets/standard.jpeg"
 
 const NavbarRightList = () => {
   const { isLoggedIn, user } = useAuthUserStore()

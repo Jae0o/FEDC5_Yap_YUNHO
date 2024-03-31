@@ -1,7 +1,9 @@
 import * as S from "./SignupInputContainer.Styles"
-import SignupInputItem from "./SignupInputItem"
-import type { OnChange, RequiredUserInfo } from "../../types"
+
 import { SIGNUP_PLACEHOLDER_MESSAGE } from "@/constants/placeholderMessage"
+
+import type { OnChange, RequiredUserInfo } from "../../types"
+import SignupInputItem from "./SignupInputItem"
 
 interface SignupInputContainerProp {
   onChange: OnChange

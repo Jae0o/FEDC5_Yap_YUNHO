@@ -1,5 +1,5 @@
-import { Category } from "@/pages/Home/components/CategoryBar/CategoryBar.Types"
 import { API } from "@/apis/Api"
+import { Category } from "@/pages/Home/components/CategoryBar/CategoryBar.Types"
 import { Channel } from "@/types"
 import { useQuery } from "@tanstack/react-query"
 

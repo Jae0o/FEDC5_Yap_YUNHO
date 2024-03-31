@@ -1,10 +1,13 @@
 import * as S from "./PostDetailInfo.Styles"
-import { Post } from "@/types"
-import PostDetailUser from "./components/PostDetailUser/PostDetailUser"
-import PostDetailStatus from "./components/PostDetailStatus/PostDetailStatus"
-import PostDetailComment from "./components/PostDetailComment/PostDetailComment"
-import useAuthUserStore from "@/stores/useAuthUserStore"
+
 import { useNavigate } from "react-router-dom"
+
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import { Post } from "@/types"
+
+import PostDetailComment from "./components/PostDetailComment/PostDetailComment"
+import PostDetailStatus from "./components/PostDetailStatus/PostDetailStatus"
+import PostDetailUser from "./components/PostDetailUser/PostDetailUser"
 
 interface PostDetailInfoProps {
   onClose: () => void

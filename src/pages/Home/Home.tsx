@@ -1,5 +1,7 @@
-import { useState } from "react"
 import * as S from "./Home.Styles"
+
+import { useState } from "react"
+
 import CategoryBar from "./components/CategoryBar/CategoryBar"
 import {
   Category,

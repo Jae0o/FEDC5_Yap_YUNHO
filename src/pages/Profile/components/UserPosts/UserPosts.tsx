@@ -1,8 +1,10 @@
-import { useState } from "react"
 import * as S from "./UserPosts.Styles"
+
+import { useState } from "react"
+
 import UserPostFilter from "./components/UserPostFilter/UserPostFilter"
-import UserCreatePostList from "./components/UserPostList/UserCreatePostList"
 import MyLikePostList from "./components/UserPostList/MyLikePostList"
+import UserCreatePostList from "./components/UserPostList/UserCreatePostList"
 import useCreatePostList from "./hooks/useCreatePostList"
 
 const UserPosts = () => {

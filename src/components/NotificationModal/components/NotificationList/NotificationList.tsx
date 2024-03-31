@@ -1,6 +1,9 @@
-import { useNavigate } from "react-router-dom"
 import * as S from "./NotificationList.Styles"
+
+import { useNavigate } from "react-router-dom"
+
 import { Notification } from "@/types/index"
+
 import NotificationItem from "./NotificationItem/NotificationItem"
 
 interface NotificationListProps {

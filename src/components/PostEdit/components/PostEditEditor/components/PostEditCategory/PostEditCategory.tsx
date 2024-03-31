@@ -1,11 +1,12 @@
-import useCategoryList from "@/hooks/useCategoryList"
 import * as S from "./PostEditCategory.Styles"
 import * as GS from "@/components/CategoryList/CategoryList.Styles"
-import { Category } from "@/pages/Home/components/CategoryBar/CategoryBar.Types"
+
 import {
   EditPostState,
   HandleEditPost,
 } from "@/components/PostEdit/PostEdit.Types"
+import useCategoryList from "@/hooks/useCategoryList"
+import { Category } from "@/pages/Home/components/CategoryBar/CategoryBar.Types"
 
 interface PostEditCategoryProps {
   onEdit: HandleEditPost

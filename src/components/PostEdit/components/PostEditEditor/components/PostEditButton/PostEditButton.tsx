@@ -1,5 +1,6 @@
-import { EditPostState } from "@/components/PostEdit/PostEdit.Types"
 import * as S from "./PostEditButton.Styles"
+
+import { EditPostState } from "@/components/PostEdit/PostEdit.Types"
 
 interface PostEditButtonProps {
   postData: EditPostState

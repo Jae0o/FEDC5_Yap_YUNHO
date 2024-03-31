@@ -1,7 +1,8 @@
+import { useNavigate } from "react-router-dom"
+
 import { API } from "@/apis/Api"
 import useAuthUserStore from "@/stores/useAuthUserStore"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { useNavigate } from "react-router-dom"
 
 const QUERY_KEY_LOGOUT =
   "HANDLE_LOGOUT_1238213124124124932092038590284091840918"

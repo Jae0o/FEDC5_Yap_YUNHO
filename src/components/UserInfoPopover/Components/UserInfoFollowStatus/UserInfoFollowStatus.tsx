@@ -1,5 +1,6 @@
-import { User } from "@/types"
 import * as S from "./UserInfoFollowStatus.Styles"
+
+import { User } from "@/types"
 import { getConvertedCount } from "@/util/getConvertedCount"
 
 interface UserInfoFollowStatusProps {

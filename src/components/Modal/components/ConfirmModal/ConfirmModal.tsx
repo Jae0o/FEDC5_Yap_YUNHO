@@ -1,5 +1,6 @@
-import * as S from "./ConfirmModal.Styles"
 import * as GS from "../../ModalGlobal.Styles"
+import * as S from "./ConfirmModal.Styles"
+
 import CustomModal from "../CustomModal/CustomModal"
 
 interface ConfirmModalProps {

@@ -1,14 +1,17 @@
-import { ChangeEvent, useState } from "react"
 import * as S from "./UserEditForm.Styles"
-import { theme } from "@/styles/theme"
-import UserEditInputContainer from "./UserEditInput/UserEditInputContainer"
+
+import { ChangeEvent, useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import ProfileImageUpload from "@/components/ProfileImageUpload/ProfileImageUpload"
-import { getNewErrorMessage } from "../utils/validateInput"
+import { theme } from "@/styles/theme"
+import { User } from "@/types"
+
 import useEditNickname from "../hooks/useEditNickname"
 import useEditPassword from "../hooks/useEditPassword"
 import useEditUserProfileImage from "../hooks/useEditUserProfileImage"
-import { User } from "@/types"
-import { useNavigate } from "react-router-dom"
+import { getNewErrorMessage } from "../utils/validateInput"
+import UserEditInputContainer from "./UserEditInput/UserEditInputContainer"
 
 interface UserEditFormProp {
   authUser: User

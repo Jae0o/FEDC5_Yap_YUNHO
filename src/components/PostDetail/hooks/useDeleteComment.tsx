@@ -1,10 +1,11 @@
+import { useState } from "react"
+
 import { AUTH_API } from "@/apis/Api"
 import AlertModal from "@/components/Modal/components/AlertModal/AlertModal"
 import useModal from "@/components/Modal/hooks/useModal"
 import { POST_DETAIL_ERROR_MESSAGE } from "@/constants/errorMessage"
 import { POST_DETAIL_MODAL_MESSAGE } from "@/constants/modalMessage"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { useState } from "react"
 
 const COMMENT_DELETE_MUTATION_KEY =
   "IT_IS_DELETE_MUTATION_KEY_672532461414612689"

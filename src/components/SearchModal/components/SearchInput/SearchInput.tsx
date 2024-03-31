@@ -1,5 +1,6 @@
-import { SearchInputProps } from "../../SearchModal.Types"
 import * as S from "./SearchInput.Styles"
+
+import { SearchInputProps } from "../../SearchModal.Types"
 import SearchInputBar from "./components/SearchInputBar/SearchInputBar"
 import SearchInputFilter from "./components/SearchInputFilter/SearchInputFilter"
 

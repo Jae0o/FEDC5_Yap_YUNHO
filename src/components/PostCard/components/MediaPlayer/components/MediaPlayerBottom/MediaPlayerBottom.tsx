@@ -1,12 +1,15 @@
+import * as S from "./MediaPlayerBottom.Styles"
+
 import { MouseEvent } from "react"
+
+import PauseCircleFilledIcon from "@mui/icons-material/PauseCircleFilled"
+import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled"
+import VolumeOffIcon from "@mui/icons-material/VolumeOff"
+import VolumeUpIcon from "@mui/icons-material/VolumeUp"
+
+import { MEDIA_PLAYER_INITIAL_VOLUME_PERCENTAGE } from "../../constants/MediaPlayer.Constants"
 import { ChangePlayer } from "../../store/useMediaPlayerStore.Types"
 import MediaPlayerSlider from "../MediaPlayerPlaySlider/MediaPlayerSlider"
-import * as S from "./MediaPlayerBottom.Styles"
-import VolumeUpIcon from "@mui/icons-material/VolumeUp"
-import VolumeOffIcon from "@mui/icons-material/VolumeOff"
-import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled"
-import PauseCircleFilledIcon from "@mui/icons-material/PauseCircleFilled"
-import { MEDIA_PLAYER_INITIAL_VOLUME_PERCENTAGE } from "../../constants/MediaPlayer.Constants"
 
 interface MediaPlayerBottomProps {
   isBlock: boolean

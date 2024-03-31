@@ -1,9 +1,11 @@
 import * as S from "./MessageGroupItem.Styles"
+
 import { MessageGroupItemProps } from "@/pages/DirectMessage/DirectMessage.Types"
-import useAuthUserStore from "@/stores/useAuthUserStore"
-import MessageProfile from "../MessageProfile/MessageProfile"
-import PriorityHighIcon from "@mui/icons-material/PriorityHigh"
 import decideChatUserName from "@/pages/DirectMessage/utils/decideChatUserName"
+import useAuthUserStore from "@/stores/useAuthUserStore"
+import PriorityHighIcon from "@mui/icons-material/PriorityHigh"
+
+import MessageProfile from "../MessageProfile/MessageProfile"
 
 const MessageGroupItem = ({
   handleMessageGroupClick,

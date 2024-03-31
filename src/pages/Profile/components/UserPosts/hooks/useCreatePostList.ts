@@ -1,8 +1,10 @@
+import { useParams } from "react-router-dom"
+
 import { API } from "@/apis/Api"
 import useAuthUserStore from "@/stores/useAuthUserStore"
 import { JSONPost } from "@/types"
 import { useQuery } from "@tanstack/react-query"
-import { useParams } from "react-router-dom"
+
 import { UserPostListItemProps } from "../components/UserPostList/components/UserPostListItem"
 
 const USER_POST_LIST_QUERY_KEY = "USER_POST_LIST_QUERY_KEY"

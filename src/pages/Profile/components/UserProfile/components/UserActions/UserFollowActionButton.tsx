@@ -1,8 +1,9 @@
 import * as S from "./UserActions.Styles"
 
+import { useParams } from "react-router-dom"
+
 import useFetchFollow from "@/hooks/useFetchFollow"
 import useFetchUnFollow from "@/hooks/useFetchUnFollow"
-import { useParams } from "react-router-dom"
 import useAuthUserStore from "@/stores/useAuthUserStore"
 
 interface followInfoProp {

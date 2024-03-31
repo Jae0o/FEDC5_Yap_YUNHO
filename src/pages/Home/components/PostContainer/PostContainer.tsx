@@ -1,11 +1,14 @@
 import * as S from "./PostContainer.Styles"
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material"
-import { Category } from "../CategoryBar/CategoryBar.Types"
-import { useQuery } from "@tanstack/react-query"
+
+import { useEffect, useState } from "react"
+
 import { API } from "@/apis/Api"
 import { JSONPost, Post } from "@/types"
+import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material"
+import { useQuery } from "@tanstack/react-query"
+
+import { Category } from "../CategoryBar/CategoryBar.Types"
 import PostCardList from "./components/PostCardList"
-import { useEffect, useState } from "react"
 import getSlicedPostList from "./util/getSlicedPostList"
 
 const GET_POST_LIST_QUERY_KEY = "IT_IS_POST_LIST_QUERY_KEY_904367589125619"

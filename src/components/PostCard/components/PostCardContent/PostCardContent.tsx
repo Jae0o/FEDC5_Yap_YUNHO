@@ -1,5 +1,7 @@
-import React from "react"
 import * as S from "./PostCardContent.Styles"
+
+import React from "react"
+
 import { PostCardContentProps } from "../../PostCard.Types"
 
 export const PostCardContent = ({

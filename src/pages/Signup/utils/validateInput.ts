@@ -1,7 +1,8 @@
 import { SIGNUP_ERROR_MESSAGE } from "@/constants/errorMessage"
+
 import {
-  ValidateUserInfo,
   RequiredUserInfo as ErrorMessageType,
+  ValidateUserInfo,
 } from "../types"
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/

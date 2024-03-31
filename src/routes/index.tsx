@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+
+import Navbar from "@/components/Navbar/Navbar"
 import {
   DirectMessage,
   Home,
@@ -8,7 +10,6 @@ import {
   Signup,
   UserEdit,
 } from "@/pages"
-import Navbar from "@/components/Navbar/Navbar"
 
 const YAPRoute = () => {
   return (

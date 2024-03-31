@@ -1,7 +1,9 @@
-import { PostComment } from "@/types"
 import * as S from "./PostCommentList.Styles"
-import PostCommentItem from "./components/PostCommentItem"
+
 import useDeleteComment from "@/components/PostDetail/hooks/useDeleteComment"
+import { PostComment } from "@/types"
+
+import PostCommentItem from "./components/PostCommentItem"
 
 interface PostCommentListProps {
   commentList: PostComment[]

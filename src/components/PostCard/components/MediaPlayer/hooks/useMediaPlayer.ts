@@ -1,15 +1,17 @@
-import useMediaPlayerStore from "@/components/PostCard/components/MediaPlayer/store/useMediaPlayerStore"
 import { useCallback, useRef } from "react"
 import ReactPlayer from "react-player"
+
+import useMediaPlayerStore from "@/components/PostCard/components/MediaPlayer/store/useMediaPlayerStore"
+
+import {
+  MEDIA_PLAYER_EMPTY_URL_KEYWORD,
+  MEDIA_PLAYER_PROGRESS_BAR_RANGE_PERCENTAGE,
+} from "../constants/MediaPlayer.Constants"
 import {
   ChangePlayer,
   ChangeUrl,
   TogglePlayer,
 } from "../store/useMediaPlayerStore.Types"
-import {
-  MEDIA_PLAYER_EMPTY_URL_KEYWORD,
-  MEDIA_PLAYER_PROGRESS_BAR_RANGE_PERCENTAGE,
-} from "../constants/MediaPlayer.Constants"
 
 const useMediaPlayer = () => {
   const playerRef = useRef<ReactPlayer>(null)

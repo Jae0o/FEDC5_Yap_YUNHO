@@ -1,5 +1,6 @@
-import { Conversation } from "@/types"
 import * as S from "./MessageGroupSeenInfo.Styles"
+
+import { Conversation } from "@/types"
 
 interface MessageGroupSeenInfoProps {
   MessageGroupList: Conversation[]

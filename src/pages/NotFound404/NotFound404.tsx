@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom"
 import * as S from "./NotFound404.Styles"
+
+import { useNavigate } from "react-router-dom"
 
 const NOT_FOUND_IMAGE_URL =
   "https://res.cloudinary.com/dalxgxu2o/image/upload/v1699980818/IMG_0508_mke9kp.gif"

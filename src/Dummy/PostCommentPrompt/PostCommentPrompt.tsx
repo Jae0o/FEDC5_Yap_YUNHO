@@ -1,7 +1,9 @@
-import CustomModal from "@/components/Modal/components/CustomModal/CustomModal"
-import * as S from "./PostCommentPrompt.styles"
 import { ChangeEvent, useState } from "react"
+
+import CustomModal from "@/components/Modal/components/CustomModal/CustomModal"
+
 import commentValidation from "../../components/PostDetail/components/PostDetailInfo/components/PostDetailComment/components/PostCommentInput/util/commentValidation"
+import * as S from "./PostCommentPrompt.styles"
 
 interface PostCommentPromptProps {
   isShow: boolean
