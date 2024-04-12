@@ -1,5 +1,6 @@
 import * as S from "./PostDetailStatus.Styles"
 
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import sendNotification from "@/apis/sendNotification"
@@ -13,6 +14,7 @@ import { getConvertedCount } from "@/util/getConvertedCount"
 import LinkIcon from "@mui/icons-material/Link"
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt"
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt"
+import { debounce } from "@mui/material"
 
 import PostDetailEditActions from "./components/PostDetailEditActions"
 
@@ -22,6 +24,12 @@ interface PostDetailStatusProps {
   isMyPost: boolean
   isLogin: boolean
   onClose: () => void
+}
+
+interface ChangePostLikeProps {
+  nextState: boolean
+  isLikePost: boolean
+  id: string | undefined
 }
 
 const PostDetailStatus = ({
@@ -44,9 +52,18 @@ const PostDetailStatus = ({
   const { mutate: unLikeMutate, isPending: isUnLikePending } = fetchUnlikeMutate
 
   const { likes } = post
-  const myLikePost = likes.find((likeData) => likeData.user === authUser._id)
 
+  const myLikePost = useMemo(
+    () => likes.find((likeData) => likeData.user === authUser._id),
+    [authUser._id, likes],
+  )
   const isMyLikePost = !!myLikePost
+
+  const [isLike, setIsLike] = useState(false)
+
+  useEffect(() => {
+    setIsLike(isMyLikePost)
+  }, [isMyLikePost])
 
   const handleClickLikeButton = () => {
     if (!isLogin) {
@@ -58,21 +75,51 @@ const PostDetailStatus = ({
       return
     }
 
-    if (isMyLikePost) {
-      unLikeMutate(myLikePost._id)
-      return
-    }
-    likeMutate(post._id, {
-      onSuccess: (response: Like) => {
-        sendNotification({
-          notificationType: "LIKE",
-          notificationTypeId: response._id,
-          userId: post.author._id,
-          postId: post._id,
-        })
-      },
+    setIsLike((state) => {
+      changePostLike({
+        nextState: !state,
+        isLikePost: isMyLikePost,
+        id: myLikePost?._id,
+      })
+      return !state
     })
   }
+
+  const changePostLike = useRef(
+    debounce(({ nextState, isLikePost, id }: ChangePostLikeProps) => {
+      if (nextState === isLikePost) {
+        return
+      }
+
+      if (!nextState && id) {
+        unLikeMutate(id)
+        return
+      }
+
+      likeMutate(post._id, {
+        onSuccess: (response: Like) => {
+          sendNotification({
+            notificationType: "LIKE",
+            notificationTypeId: response._id,
+            userId: post.author._id,
+            postId: post._id,
+          })
+        },
+      })
+    }, 1000),
+  ).current
+
+  const likeCount = useMemo(() => {
+    if (isLike && !isMyLikePost) {
+      return likes.length + 1
+    }
+
+    if (!isLike && isMyLikePost) {
+      return likes.length - 1
+    }
+
+    return likes.length
+  }, [isLike, isMyLikePost, likes.length])
 
   const handleConfirm = (isAccept: boolean) => {
     if (isAccept) {
@@ -80,24 +127,22 @@ const PostDetailStatus = ({
       navigate("/login")
       return
     }
+
     closeConfirm()
   }
+
   return (
     <>
       <S.PostDetailStatusLayout>
         <S.PostDetailStatusActions>
           <S.PostDetailLike
-            $isMyLikePost={isMyLikePost}
+            $isMyLikePost={isLike}
             onClick={handleClickLikeButton}
             disabled={isLikePending || isUnLikePending}
           >
-            {isMyLikePost && myLikePost._id ? (
-              <ThumbUpAltIcon />
-            ) : (
-              <ThumbUpOffAltIcon />
-            )}
+            {isLike ? <ThumbUpAltIcon /> : <ThumbUpOffAltIcon />}
 
-            {getConvertedCount(likes.length)}
+            {getConvertedCount(likeCount)}
           </S.PostDetailLike>
 
           <S.PostDetailLink
