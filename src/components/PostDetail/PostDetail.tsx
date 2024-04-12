@@ -16,10 +16,14 @@ interface PostDetailProps {
 const PostDetail = ({ onClose }: PostDetailProps) => {
   const { isShowPostDetail } = usePostDetailModalStore()
   const { id } = useParams()
-  const post = useGetPost({ postId: id })
+  const { post, isLoading } = useGetPost({ postId: id })
 
   if (!id) {
     onClose()
+    return
+  }
+
+  if (isLoading) {
     return
   }
 

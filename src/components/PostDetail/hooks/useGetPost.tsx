@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query"
 export const POST_DETAIL_QUERY_KEY = "POST_DETAIL_QUERY_KEY_18264196289164"
 
 const useGetPost = ({ postId }: { postId: string | undefined }) => {
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: [POST_DETAIL_QUERY_KEY, postId],
     queryFn: async () => {
       return await API.get(`/posts/${postId}`).then((res) => res.data)
@@ -26,7 +26,10 @@ const useGetPost = ({ postId }: { postId: string | undefined }) => {
     },
   })
 
-  return data
+  return {
+    post: data,
+    isLoading,
+  }
 }
 
 export default useGetPost
