@@ -1,16 +1,25 @@
 import * as S from "./PostDetailUser.Styles"
 
+import { useEffect, useMemo, useRef, useState } from "react"
+
 import standardImage from "@/assets/standard.jpeg"
 import useFetchFollow from "@/hooks/useFetchFollow"
 import useFetchUnFollow from "@/hooks/useFetchUnFollow"
 import useAuthUserStore from "@/stores/useAuthUserStore"
 import { Post } from "@/types"
 import { getConvertedCount } from "@/util/getConvertedCount"
+import { debounce } from "@mui/material"
 
 interface PostDetailInfoUserProps {
   isMyPost: boolean
   post: Post
   onClick?: () => void
+}
+
+interface ChangeFollowProps {
+  nextState: boolean
+  isFollow: boolean
+  followId?: string
 }
 
 const PostDetailUser = ({
@@ -22,33 +31,64 @@ const PostDetailUser = ({
   const { fetchFollowMutate, FollowErrorAlertModal } = useFetchFollow()
   const { fetchUnFollowMutate, UnFollowErrorAlertModal } = useFetchUnFollow()
 
+  const [followState, setFollowState] = useState(false)
+
   const { author } = post
   const { image, fullName, followers } = author
-  const followerCount = getConvertedCount(followers.length)
 
-  const hasFollowingData = user.following.find(
-    (following) => following.user === author._id,
+  const hasFollowingData = useMemo(
+    () => user.following.find((following) => following.user === author._id),
+    [author._id, user.following],
   )
+  const isFollowUser = useMemo(() => !!hasFollowingData, [hasFollowingData])
+
+  useEffect(() => {
+    setFollowState(isFollowUser)
+  }, [isFollowUser])
 
   const handleClickFollow = () => {
-    if (fetchFollowMutate.isPending || fetchUnFollowMutate.isPending) {
-      return
-    }
+    setFollowState((prevState) => {
+      changeFollow({
+        nextState: !prevState,
+        isFollow: isFollowUser,
+        followId: hasFollowingData?._id,
+      })
 
-    fetchFollowMutate.mutate(author._id)
+      return !prevState
+    })
   }
 
-  const handleClickUnFollow = () => {
-    if (fetchFollowMutate.isPending || fetchUnFollowMutate.isPending) {
-      return
-    }
+  const changeFollow = useRef(
+    debounce(({ nextState, isFollow, followId }: ChangeFollowProps) => {
+      if (nextState === isFollow) {
+        return
+      }
 
-    if (hasFollowingData) {
-      fetchUnFollowMutate.mutate(hasFollowingData._id)
-    }
-  }
+      if (!nextState && followId) {
+        fetchUnFollowMutate.mutate(followId)
+        return
+      }
+
+      if (nextState) {
+        fetchFollowMutate.mutate(author._id)
+      }
+    }, 1000),
+  ).current
 
   const imageSrc = image ? image : standardImage
+
+  const followerCount = useMemo(() => {
+    console.log(followers.length)
+    if (!followState && isFollowUser) {
+      return getConvertedCount(followers.length - 1)
+    }
+
+    if (followState && !isFollowUser) {
+      return getConvertedCount(followers.length + 1)
+    }
+
+    return getConvertedCount(followers.length)
+  }, [followState, followers.length, isFollowUser])
 
   return (
     <S.PostDetailUserLayout>
@@ -68,27 +108,16 @@ const PostDetailUser = ({
         </S.PostDetailUserInfo>
       </S.PostDetailUserContainer>
 
-      {isLoggedIn &&
-        !isMyPost &&
-        (hasFollowingData ? (
-          <S.PostDetailFollowButton
-            disabled={
-              fetchFollowMutate.isPending || fetchUnFollowMutate.isPending
-            }
-            onClick={handleClickUnFollow}
-          >
-            {"언 팔로우"}
-          </S.PostDetailFollowButton>
-        ) : (
-          <S.PostDetailFollowButton
-            disabled={
-              fetchFollowMutate.isPending || fetchUnFollowMutate.isPending
-            }
-            onClick={handleClickFollow}
-          >
-            {"팔로우"}
-          </S.PostDetailFollowButton>
-        ))}
+      {isLoggedIn && !isMyPost && (
+        <S.PostDetailFollowButton
+          disabled={
+            fetchFollowMutate.isPending || fetchUnFollowMutate.isPending
+          }
+          onClick={handleClickFollow}
+        >
+          {followState ? "언 팔로우" : "팔로우"}
+        </S.PostDetailFollowButton>
+      )}
 
       {FollowErrorAlertModal}
       {UnFollowErrorAlertModal}
