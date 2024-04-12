@@ -44,9 +44,9 @@ const PostDetailStatus = ({
   const { mutate: unLikeMutate, isPending: isUnLikePending } = fetchUnlikeMutate
 
   const { likes } = post
-  const myLikePost = post.likes.find(
-    (likeData) => likeData.user === authUser._id,
-  )
+  const myLikePost = likes.find((likeData) => likeData.user === authUser._id)
+
+  const isMyLikePost = !!myLikePost
 
   const handleClickLikeButton = () => {
     if (!isLogin) {
@@ -58,7 +58,7 @@ const PostDetailStatus = ({
       return
     }
 
-    if (myLikePost) {
+    if (isMyLikePost) {
       unLikeMutate(myLikePost._id)
       return
     }
@@ -87,11 +87,11 @@ const PostDetailStatus = ({
       <S.PostDetailStatusLayout>
         <S.PostDetailStatusActions>
           <S.PostDetailLike
-            $isMyLikePost={!!myLikePost}
+            $isMyLikePost={isMyLikePost}
             onClick={handleClickLikeButton}
             disabled={isLikePending || isUnLikePending}
           >
-            {myLikePost && myLikePost._id ? (
+            {isMyLikePost && myLikePost._id ? (
               <ThumbUpAltIcon />
             ) : (
               <ThumbUpOffAltIcon />
