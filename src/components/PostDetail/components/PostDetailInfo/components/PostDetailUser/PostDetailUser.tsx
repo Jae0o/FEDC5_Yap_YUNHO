@@ -78,7 +78,6 @@ const PostDetailUser = ({
   const imageSrc = image ? image : standardImage
 
   const followerCount = useMemo(() => {
-    console.log(followers.length)
     if (!followState && isFollowUser) {
       return getConvertedCount(followers.length - 1)
     }
