@@ -1,7 +1,9 @@
 import * as S from "./MediaPlayer.Styles"
 
-import { MouseEvent, useCallback, useEffect } from "react"
+import { MouseEvent, useCallback, useEffect, useRef } from "react"
 import ReactPlayer from "react-player"
+
+import { debounce } from "@mui/material"
 
 import { MediaPlayerProps } from "./MediaPlayer.Types"
 import MediaPlayerBottom from "./components/MediaPlayerBottom/MediaPlayerBottom"
@@ -65,6 +67,12 @@ const MediaPlayer = ({ isBlock, url }: MediaPlayerProps): React.ReactNode => {
     [isBlock, onChangeRange],
   )
 
+  const changeOnProgress = useRef(
+    debounce((played: number) => {
+      handleChangePlayer({ type: "onProgress", percent: played })
+    }, 100),
+  ).current
+
   return (
     <>
       <S.MediaPlayerHidden>
@@ -83,7 +91,7 @@ const MediaPlayer = ({ isBlock, url }: MediaPlayerProps): React.ReactNode => {
             },
           }}
           onProgress={({ played }) => {
-            handleChangePlayer({ type: "onProgress", percent: played })
+            changeOnProgress(played)
           }}
         />
       </S.MediaPlayerHidden>
