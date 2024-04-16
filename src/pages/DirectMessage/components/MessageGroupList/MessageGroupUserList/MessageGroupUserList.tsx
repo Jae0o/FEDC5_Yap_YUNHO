@@ -1,4 +1,4 @@
-import * as S from "./MessageGroupUserlist.Styles"
+import * as S from "./MessageGroupUserList.Styles"
 
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
