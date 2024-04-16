@@ -2,7 +2,7 @@ import * as S from "./OthersMessage.Styles.ts"
 
 import UserInfoPopover from "@/components/UserInfoPopover/UserInfoPopover.tsx"
 
-import MessageProfile from "../../../MessageGroupList/MessageGroupUserlist/MessageProfile/MessageProfile.tsx"
+import MessageProfile from "../../../MessageGroupList/MessageGroupUserList/MessageProfile/MessageProfile.tsx"
 import { MessageProps } from "./../../../../DirectMessage.Types"
 
 const OthersMessage = ({ messageData }: MessageProps) => {

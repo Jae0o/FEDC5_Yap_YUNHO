@@ -2,7 +2,7 @@ import * as S from "./NotificationItem.Styles"
 
 import { useLocation, useNavigate } from "react-router-dom"
 
-import MessageProfile from "@/pages/DirectMessage/components/MessageGroupList/MessageGroupUserlist/MessageProfile/MessageProfile"
+import MessageProfile from "@/pages/DirectMessage/components/MessageGroupList/MessageGroupUserList/MessageProfile/MessageProfile"
 import { Notification } from "@/types"
 
 import getNotificationOption from "../../../utils/getNotificationOption"

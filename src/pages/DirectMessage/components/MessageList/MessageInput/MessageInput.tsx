@@ -5,7 +5,7 @@ import useTextArea from "@/pages/DirectMessage/hooks/useTextArea"
 import useAuthUserStore from "@/stores/useAuthUserStore"
 import SendIcon from "@mui/icons-material/Send"
 
-import MessageProfile from "../../MessageGroupList/MessageGroupUserlist/MessageProfile/MessageProfile"
+import MessageProfile from "../../MessageGroupList/MessageGroupUserList/MessageProfile/MessageProfile"
 
 export interface MessageInputProps {
   scrollRef: React.RefObject<HTMLDivElement>
